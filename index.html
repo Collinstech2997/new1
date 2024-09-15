@@ -1,430 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <title>D-JIC 23/24 SS3 GRADUATING STUDENTS</title>
-    <meta name="description" content="class" />
-    <meta name="author" content="sitepoint" />
-
-    <link rel="stylesheet" href="Links/sss3.css"  />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Messages</title>
+    <link rel="stylesheet" href="script.css">
 </head>
-<body> 
-    
-    <body>
-        <div class="container">
-            <h1>Congratulations!</h1>
-            <p>Dear ,</p>
-            <p>Congratulations on your graduation from secondary school</p>
-            <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-            <div class="character">
-                <div class="character-image">
-                    <img src="maya.jpg" alt="Maya Thompson">
-                </div>
-                <div class="character-description">
-                    <h2>Character: kasaba sidiq</h2>
-                    <p><strong>Age:</strong> 16</p>
-                    <p><strong>about them:</strong>sidik also known as suckidick is a young boy , he does like talking with women but rather the one he likes makes her a slave to his wish and desire .He is a catastrophic persona and never wanting to take blames rather gives flimsy excuses.he loves the electricity that runs through mobile devices and loves to explore them in nearest future..</p></br>
-                    
-                </div>
-            </div>
+<body>
+
+    <!-- Login Section -->
+    <div id="loginContainer" class="form-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="role">Select Role:</label>
+            <select id="role">
+                <option value="admin">Admin</option>
+                <option value="member">Member</option>
+            </select>
+
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
             
+            <button type="submit">Login</button>
+            <p id="loginError" style="color: red; display: none;">Invalid credentials!</p>
+        </form>
+    </div>
+
+    <!-- Member View Section (hidden initially) -->
+    <div id="memberApp" style="display: none;">
+        <h1>Send an Anonymous Message</h1>
+        <div class="form-container">
+            <form id="messageForm">
+                <label for="userMessage">Your Message</label>
+                <textarea id="userMessage" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
-        <div class="container">
-            <h1>Congratulations!</h1>
-            <p>Dear ,</p>
-            <p>Congratulations on your graduation from secondary school</p>
-            <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-            <div class="character">
-                <div class="character-image">
-                    <img src="maya.jpg" alt="Maya Thompson">
-                </div>
-                <div class="character-description">
-                    <h2>Character: Alawode victoria</h2>
-                    <p><strong>Age:</strong> 16</p>
-                    <p><strong>about them:</strong> victoria also known as vikky  is a determined and ambitious individual who is passionate about other and helping in saving lives...</p></br>
+    </div>
 
-            
-                
-                </div>
-            </div>
-            <div class="container">
-                <h1>Congratulations!</h1>
-                <p>Dear ,</p>
-                <p>Congratulations on your graduation from secondary school</p>
-                <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                <div class="character">
-                    <div class="character-image">
-                        <img src="maya.jpg" alt="Maya Thompson">
-                    </div>
-                    <div class="character-description">
-                        <h2>Character: robert favour</h2>
-                        <p><strong>Age:</strong> 17</p>
-                        <p><strong>about them:</strong> robert also known as roberto is a promiscuous character that is known in the whole class , he likes very big things and is also blind for love can do anything for love.</p><br/>
+    <!-- Admin View Section (hidden initially) -->
+    <div id="adminApp" style="display: none;">
+        <h1>Send an Anonymous Message</h1>
+        <div class="form-container">
+            <form id="messageFormAdmin">
+                <label for="userMessageAdmin">Your Message</label>
+                <textarea id="userMessageAdmin" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
 
-                </div>
-                <div class="container">
-                    <h1>Congratulations!</h1>
-                    <p>Dear ,</p>
-                    <p>Congratulations on your graduation from secondary school</p>
-                    <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                    <div class="character">
-                        <div class="character-image">
-                            <img src="maya.jpg" alt="Maya Thompson">
-                        </div>
-                        <div class="character-description">
-                            <h2>Character: Emmanuel Aaron </h2>
-                            <p><strong>Age:</strong> 18</p>
-                            <p><strong>about them:</strong> Aaron also known as yangs  is a young handsome nigga that doesnt seriously belive in love cos cos he belives in making the mulla first.</p></br>
-                               
-                        </div>
-                    
-                    <div class="container">
-                        <h1>Congratulations!</h1>
-                        <p>Dear ,</p>
-                        <p>Congratulations on your graduation from secondary school</p>
-                        <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                        <div class="character">
-                            <div class="character-image">
-                                <img src="maya.jpg" alt="Maya Thompson">
-                            </div>
-                            <div class="character-description">
-                                <h2>Character: Adegbulugbe temilade</h2>
-                                <p><strong>Age:</strong> 15</p>
-                                <p><strong>about them:</strong> temilade is a young beautiful damsel that doesnt seriously belive in love cos the person she loves doest love her so she makes otherguys suffer for one guys sin.</p></br>
-                                   
-                            </div>
-                        </div>
+        <div id="messageDisplay" class="message-display">
+            <h2>All Messages (Visible to Admin)</h2>
+            <ul id="messageList"></ul>
+        </div>
+    </div>
 
-            <div class="container">
-                    <h1>Congratulations!</h1>
-                    <p>Dear ,</p>
-                    <p>Congratulations on your graduation from secondary school</p>
-                    <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                    <div class="character">
-                        <div class="character-image">
-                            <img src="maya.jpg" alt="Maya Thompson">
-                        </div>
-                        <div class="character-description">
-                            <h2>Character:Alausa triumph</h2>
-                            <p><strong>Age:</strong> 16</p>
-                            <p><strong>about them:</strong> triumph is a short ychubb damsel that  seriously believe in love cos the person she loves love her shes always happy but sometimes crazy has her namesake.</p></br>
-                               
-                        </div>
-                    </div>
-                    <div class="container">
-                        <h1>Congratulations!</h1>
-                        <p>Dear ,</p>
-                        <p>Congratulations on your graduation from secondary school</p>
-                        <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                        <div class="character">
-                            <div class="character-image">
-                                <img src="maya.jpg" alt="Maya Thompson">
-                            </div>
-                            <div class="character-description">
-                                <h2>Character: Adeaga victor</h2>
-                                <p><strong>Age:</strong> 16</p>
-                                <p><strong>about them:</strong> also known as Angel  is a young cool ,skinny guy that likes to connect ,even thou he already has one food he still likes to taste other food because he is luxurious.</p></br>
-                                   
-                            </div>
-                        </div>
-                        <div class="container">
-                            <h1>Congratulations!</h1>
-                            <p>Dear ,</p>
-                            <p>Congratulations on your graduation from secondary school</p>
-                            <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                            <div class="character">
-                                <div class="character-image">
-                                    <img src="maya.jpg" alt="Maya Thompson">
-                                </div>
-                                <div class="character-description">
-                                    <h2>Character:Adegoke enoch</h2>
-                                    <p><strong>Age:</strong> 17</p>
-                                    <p><strong>about them:</strong> Adegoke  is a short adamant boy with brute strength loves liverpool and bellingham, he aspires to be an engineer</p></br>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <h1>Congratulations!</h1>
-                                <p>Dear ,</p>
-                                <p>Congratulations on your graduation from secondary school</p>
-                                <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                                <div class="character">
-                                    <div class="character-image">
-                                        <img src="maya.jpg" alt="Maya Thompson">
-                                    </div>
-                                    <div class="character-description">
-                                        <h2>Character: Onalapo naimat</h2>
-                                        <p><strong>Age:</strong> 17</p>
-                                        <p><strong>about them:</strong> Naimat is a slim,tall nd elegant lady,she is a crazy queen she is social and interacting .</p></br>
-                                           
-                                    </div>
-                                </div>
-                                <div class="container">
-                                    <h1>Congratulations!</h1>
-                                    <p>Dear ,</p>
-                                    <p>Congratulations on your graduation from secondary school</p>
-                                    <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                                    <div class="character">
-                                        <div class="character-image">
-                                            <img src="maya.jpg" alt="Maya Thompson">
-                                        </div>
-                                        <div class="character-description">
-                                            <h2>Character: Adegoke samad </h2>
-                                            <p><strong>Age:</strong> 17</p>
-                                            <p><strong>about them:</strong> also known as puncho is a chubby strong elegant person with great mindset even thou yansh still dey his mind with cash</p></br>
-                                        </div>
-                                    </div>
-                                    <div class="container">
-                                        <h1>Congratulations!</h1>
-                                        <p>Dear ,</p>
-                                        <p>Congratulations on your graduation from secondary school</p>
-                                        <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                                        <div class="character">
-                                            <div class="character-image">
-                                                <img src="maya.jpg" alt="Maya Thompson">
-                                            </div>
-                                            <div class="character-description">
-                                                <h2>Character: okechuwku ephraim</h2>
-                                                <p><strong>Age:</strong> 17</p>
-                                                <p><strong>about them:</strong> is a young vicious boy that thinks of the best for is future brilliant and wise but heartbreak don .teach ham lesson but still no dey hear word,he has anger issues</p></br>
-                                                   
-                                            </div>
-                                        </div>
-                                        <div class="container">
-                                            <h1>Congratulations!</h1>
-                                            <p>Dear ,</p>
-                                            <p>Congratulations on your graduation from secondary school</p>
-                                            <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                                            <div class="character">
-                                                <div class="character-image">
-                                                    <img src="maya.jpg" alt="Maya Thompson">
-                                                </div>
-                                                <div class="character-description">
-                                                    <h2>Character: Oni obaloluwa </h2>
-                                                    <p><strong>Age:</strong> 17</p>
-                                                    <p><strong>about them:</strong>Oba is a very ambitious young boy that is luxurious and somehow rough acts strong but weak.</p></br>
-                                                       
-                                                </div>
-                                            </div>
-                                            <div class="container">
-                                                <h1>Congratulations!</h1>
-                                                <p>Dear ,</p>
-                                                <p>Congratulations on your graduation from secondary school</p>
-                                                <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                                                <div class="character">
-                                                    <div class="character-image">
-                                                        <img src="maya.jpg" alt="Maya Thompson">
-                                                    </div>
-                                                    <div class="character-description">
-                                                        <h2>Character: Levi samuel</h2>
-                                                        <p><strong>Age:</strong> 17</p>
-                                                        <p><strong>about them:</strong> Bro na frosh ladies love him because he is handsome but he is weak,and sometimes act dumb. </p></br>
-                                                           
-                                                    </div>
-                                                </div>
-                                                <div class="container">
-                                                    <h1>Congratulations!</h1>
-                                                    <p>Dear ,</p>
-                                                    <p>Congratulations on your graduation from secondary school</p>
-                                                    <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                                                    <div class="character">
-                                                        <div class="character-image">
-                                                            <img src="maya.jpg" alt="Maya Thompson">
-                                                        </div>
-                                                        <div class="character-description">
-                                                            <h2>Character: arowosola christi </h2>
-                                                            <p><strong>Age:</strong> 17</p>
-                                                            <p><strong>about them:</strong> he is a a skillfull player a sensitive person and loves to look for penny troubles .</p></br>
-
-                                                               
-                                                        </div>
-                                                    </div>
-                                                    <div class="container">
-                                                        <h1>Congratulations!</h1>
-                                                        <p>Dear ,</p>
-                                                        <p>Congratulations on your graduation from secondary school</p>
-                                                        <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                                                        <div class="character">
-                                                            <div class="character-image">
-                                                                <img src="maya.jpg" alt="Maya Thompson">
-                                                            </div>
-                                                            <div class="character-description">
-                                                                <h2>Character: Ilori tunmise</h2>
-                                                                <p><strong>Age:</strong> 16</p>
-                                                                <p><strong>about them:</strong> she is a lady on the quest to let every man have a piece from her cake, she is a vibist and a scopist to be precised  .</p></br>
-                                                                   
-                                                            </div>
-                                                        </div><div class="container">
-                                                            <h1>Congratulations!</h1>
-                                                            <p>Dear ,</p>
-                                                            <p>Congratulations on your graduation from secondary school</p>
-                                                            <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                                                            <div class="character">
-                                                                <div class="character-image">
-                                                                    <img src="maya.jpg" alt="Maya Thompson">
-                                                                </div>
-                                                                <div class="character-description">
-                                                                    <h2>Character:osim blossom</h2>
-                                                                    <p><strong>Age:</strong> 16</p>
-                                                                    <p><strong>about them:</strong> we dont know much about her but she likes tiktok and spicy chats .</p></br>
-                                                                       
-                                                                </div>
-                                                            </div>
-                                                            <div class="container">
-                                                                <h1>Congratulations!</h1>
-                                                                <p>Dear ,</p>
-                                                                <p>Congratulations on your graduation from secondary school</p>
-                                                                <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                                                                <div class="character">
-                                                                    <div class="character-image">
-                                                                        <img src="maya.jpg" alt="Maya Thompson">
-                                                                    </div>
-                                                                    <div class="character-description">
-                                                                        <h2>Character: Alelume grace</h2>
-                                                                        <p><strong>Age:</strong> 16</p>
-                                                                        <p><strong>about them:</strong> Grace is a cold werey and attention seeking one , she is jovial and friendly.</p></br>
-
-                                                                           
-                                                                    </div>
-                                                                </div>
-                                                                <div class="container">
-                                                                    <h1>Congratulations!</h1>
-                                                                    <p>Dear ,</p>
-                                                                    <p>Congratulations on your graduation from secondary school</p>
-                                                                    <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                                                                    <div class="character">
-                                                                        <div class="character-image">
-                                                                            <img src="maya.jpg" alt="Maya Thompson">
-                                                                        </div>
-                                                                        <div class="character-description">
-                                                                            <h2>Character: Anuoluwapo grace/h2>
-                                                                            <p><strong>Age:</strong> 17</p>
-                                                                            <p><strong>about them:</strong> Grace is a chubby lady,little is known about her but she is one infamous moodswing queen.</p></br>
-
-                                                                               
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="container">
-                                                                        <h1>Congratulations!</h1>
-                                                                        <p>Dear ,</p>
-                                                                        <p>Congratulations on your graduation from secondary school</p>
-                                                                        <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                                                                        <div class="character">
-                                                                            <div class="character-image">
-                                                                                <img src="maya.jpg" alt="Maya Thompson">
-                                                                            </div>
-                                                                            <div class="character-description">
-                                                                                <h2>Character: Oyenekan eunice</h2>
-                                                                                <p><strong>Age:</strong> 16</p>
-                                                                                <p><strong>about them:</strong> eunice is a pretty,social girl , she is said to ave loved alot of guys ,she even ave alot of celebrity crush , her boyfriend might end up dying od suspicion of her cheating .</p></br>
-                                                                                   
-                                                                            </div>
-                                                                        </div><div class="container">
-                                                                            <h1>Congratulations!</h1>
-                                                                            <p>Dear ,</p>
-                                                                            <p>Congratulations on your graduation from secondary school</p>
-                                                                            <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                                                                            <div class="character">
-                                                                                <div class="character-image">
-                                                                                    <img src="maya.jpg" alt="Maya Thompson">
-                                                                                </div>
-                                                                                <div class="character-description">
-                                                                                    <h2>Character: Akande fikayo</h2>
-                                                                                    <p><strong>Age:</strong> 16</p>
-                                                                                    <p><strong>about them:</strong> fikayo also fikky baby is a childish self appreciating lady, likes to prove superioity against men , she's alsoputs in effort into looking dumb  .</p></br>
-                                                                                       
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="container">
-                                                                                <h1>Congratulations!</h1>
-                                                                                <p>Dear ,</p>
-                                                                                <p>Congratulations on your graduation from secondary school</p>
-                                                                                <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                                                                                <div class="character">
-                                                                                    <div class="character-image">
-                                                                                        <img src="maya.jpg" alt="Maya Thompson">
-                                                                                    </div>
-                                                                                    <div class="character-description">
-                                                                                        <h2>Character: Aminat nifemi</h2>
-                                                                                        <p><strong>Age:</strong> 16</p>
-                                                                                        <p><strong>about them:</strong> nifemi is a skinny young short lady she likes guys too much and playful alot, just like fikayo dem both behave D-U-M-B.</p></br>
-                                                                                           
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="container">
-                                                                                    <h1>Congratulations!</h1>
-                                                                                    <p>Dear ,</p>
-                                                                                    <p>Congratulations on your graduation from secondary school</p>
-                                                                                    <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                                                                                    <div class="character">
-                                                                                        <div class="character-image">
-                                                                                            <img src="maya.jpg" alt="Maya Thompson">
-                                                                                        </div>
-                                                                                        <div class="character-description">
-                                                                                            <h2>Character: Olukayode treasure</h2>
-                                                                                            <p><strong>Age:</strong> 17</p>
-                                                                                            <p><strong>about them:</strong>treasure also known as idan is a nigga omo moniya who doesnt give a fuck when he sees woman and not any but with nyansh small,big,medium.  </p></br>
-
-                                                                                               
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="container">
-                                                                                        <h1>Congratulations!</h1>
-                                                                                        <p>Dear ,</p>
-                                                                                        <p>Congratulations on your graduation from secondary school</p>
-                                                                                        <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                                                                                        <div class="character">
-                                                                                            <div class="character-image">
-                                                                                                <img src="maya.jpg" alt="Maya Thompson">
-                                                                                            </div>
-                                                                                            <div class="character-description">
-                                                                                                <h2>Character:Ahmend rashidat </h2>
-                                                                                                <p><strong>Age:</strong> 16</p>
-                                                                                                <p><strong>about them:</strong>   she is the definition of cold madness hardly interact with other except from her boss(gloria)she is childish and when she olays na violence.</p></br>
-                                                                                                   
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        lass="container">
-                                                                                        <h1>Congratulations!</h1>
-                                                                                        <p>Dear ,</p>
-                                                                                        <p>Congratulations on your graduation from secondary school</p>
-                                                                                        <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                                                                                        <div class="character">
-                                                                                            <div class="character-image">
-                                                                                                <img src="maya.jpg" alt="Maya Thompson">
-                                                                                            </div>
-                                                                                            <div class="character-description">
-                                                                                                <h2>Character:Atanda oyinkansola</h2>
-                                                                                                <p><strong>Age:</strong> 16</p>
-                                                                                                <p><strong>about them:</strong>   she is short with a arrogant mindset jovial and also a professional SAN(Senior Amebo of NIgeria).</p></br> 
-                                                                                            </div>
-                                                                                            lass="container">
-                                                                                        <h1>Congratulations!</h1>
-                                                                                        <p>Dear ,</p>
-                                                                                        <p>Congratulations on your graduation from secondary school</p>
-                                                                                        <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                                                                                        <div class="character">
-                                                                                            <div class="character-image">
-                                                                                                <img src="maya.jpg" alt="Maya Thompson">
-                                                                                            </div>
-                                                                                            <div class="character-description">
-                                                                                                <h2>Character:Ayodele darasimi </h2>
-                                                                                                <p><strong>Age:</strong> 17</p>
-                                                                                                <p><strong>about them:</strong>   he is a short king with diverse capabilities he does like girls and a captain for the guys </p></br>
-                                                                                            </div>
-                                                                                            lass="container">
-                                                                                        <h1>Congratulations!</h1>
-                                                                                        <p>Dear ,</p>
-                                                                                        <p>Congratulations on your graduation from secondary school</p>
-                                                                                        <p>We are proud of your accomplishments and wish you all the best for your future endeavors.</p>
-                                                                                        <div class="character">
-                                                                                            <div class="character-image">
-                                                                                                <img src="maya.jpg" alt="Maya Thompson">
-                                                                                            </div>
-                                                                                            <div class="character-description">
-                                                                                                <h2>Character:Kajola john </h2>
-                                                                                                <p><strong>Age:</strong> 17</p>
-                                                                                                <p><strong>about them:</strong>  he is a cool thin bro that loves any woman</p></br>
-                                                                                            </div>
-                                                                                            </body>
-    </html>
-    </body>
+    <script src="Untitled-1.js"></script>
+</body>
+</html>

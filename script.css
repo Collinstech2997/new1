@@ -1,0 +1,145 @@
+/* General form container styling */
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2, h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Login form */
+#loginContainer {
+    display: block;
+}
+
+#loginContainer label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+#loginContainer input,
+#loginContainer select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+#loginContainer button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#loginContainer button:hover {
+    background-color: #218838;
+}
+
+#loginError {
+    text-align: center;
+    color: red;
+    margin-top: 10px;
+}
+
+/* Member and admin view */
+#memberApp, #adminApp {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#messageForm label,
+#messageFormAdmin label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+#messageForm textarea,
+#messageFormAdmin textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-bottom: 16px;
+    resize: vertical;
+    min-height: 100px;
+}
+
+#messageForm button,
+#messageFormAdmin button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#messageForm button:hover,
+#messageFormAdmin button:hover {
+    background-color: #0056b3;
+}
+
+/* Admin view message display */
+#messageDisplay {
+    margin-top: 40px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#messageDisplay h2 {
+    color: #333;
+}
+
+#messageList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#messageList li {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .form-container, #memberApp, #adminApp {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    #messageDisplay {
+        width: 100%;
+        padding: 15px;
+    }
+}
